@@ -4,7 +4,7 @@ int main (void) {
   int N;
   scanf("%d", &N);
 
-  int found = 0;
+  int exist = 0;
 
   for (int a = 1; a <= N / 900; a++){
     for (int b = 2; b <= N / 750; b+= 2){
@@ -12,13 +12,13 @@ int main (void) {
         if (900 * a + 750 * b + 200 * c == N) {
           if (c < a || c < b) {
             printf("%d %d %d\n", a, b, c);
-            found = 1;
+            exist = 1;
           }
         }
       }
     }
   }
-  if (!found) {
+  if (!exist) {
     printf("none\n");
   }
   return 0;
