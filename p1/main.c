@@ -18,7 +18,7 @@ int main (void) {
       }
     }
   }
-  if (!exist) {
+  if (exist == 0) {
     printf("none\n");
   }
   return 0;
